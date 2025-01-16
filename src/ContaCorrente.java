@@ -1,3 +1,4 @@
+
 /**
  * Classe que representa uma Conta Corrente e implementa as operações de Pix.
  */
@@ -9,7 +10,6 @@ public class ContaCorrente extends Conta implements Pix {
     /**
      * Depositar na conta corrente
      */
-    @Override
     public void depositar(double valor) {
         saldo += valor;
         registrarOperacao("Depósito", valor);
@@ -18,7 +18,6 @@ public class ContaCorrente extends Conta implements Pix {
     /**
      * Sacar na conta corrente
      */
-    @Override
     public void sacar(double valor) throws SaldoInsuficienteException {
         if (saldo < valor) {
             throw new SaldoInsuficienteException("Saldo insuficiente para saque");
@@ -30,7 +29,6 @@ public class ContaCorrente extends Conta implements Pix {
     /**
      * Cadastrar Pix na conta corrente
      */
-    @Override
     public void cadastrarPix(String cpf) {
         Banco.cpfsPix.add(cpf);
     }
@@ -38,8 +36,6 @@ public class ContaCorrente extends Conta implements Pix {
     /**
      * Efetuar Pix na conta corrente (levando em consideração se tem saldo ou não na conta)
      */
-
-    @Override
     public void efetuarPix(String cpfDestino, double valor) throws SaldoInsuficienteException {
         if (saldo < valor) {
             throw new SaldoInsuficienteException("Saldo insuficiente para realizar o PIX");
@@ -53,10 +49,8 @@ public class ContaCorrente extends Conta implements Pix {
         }
     }
 
-    @Override
     public void receberPix(String cpfOrigem, double valor) {
         saldo += valor;
         registrarOperacao("PIX In", valor);
     }
 }
-

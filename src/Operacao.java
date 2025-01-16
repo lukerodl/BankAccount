@@ -1,5 +1,6 @@
 import java.util.Date;
 
+
 public class Operacao {
     private Date data;
     private double valor;
@@ -23,9 +24,7 @@ public class Operacao {
         return tipo;
     }
 
-    @Override
     public String toString() {
         return String.format("%s\t%s\t%.2f", data, tipo, valor);
     }
 }
-

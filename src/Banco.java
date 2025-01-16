@@ -2,13 +2,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
 /**
  * Classe principal do sistema bancário Banco Object.
  * Contém métodos estáticos para gerenciamento de contas e operações.
  */
 public class Banco {
-    public static List<Conta> contas = new ArrayList<>();
     public static List<String> cpfsPix = new ArrayList<>();
+    public static List<Conta> contas = new ArrayList<>();
     private static final Scanner scanner = new Scanner(System.in);
 
     /**
@@ -46,7 +47,7 @@ public class Banco {
     }
 
     /**
-     * Realiza um depósito em uma conta.
+     * ##################Realiza um depósito em uma conta.
      */
     public static void efetuarDeposito() {
         System.out.print("Número da conta para depósito: ");
@@ -65,7 +66,7 @@ public class Banco {
     }
 
     /**
-     * Realiza um saque em uma conta.
+     * ##################RRealiza um saque em uma conta.
      */
     public static void efetuarSaque() {
         System.out.print("Número da conta para saque: ");
@@ -193,4 +194,3 @@ public class Banco {
         scanner.close();
     }
 }
-

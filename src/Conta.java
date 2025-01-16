@@ -9,7 +9,7 @@ public abstract class Conta {
     protected int numeroConta;
     protected String nomeCorrentista;
     protected String cpfCorrentista;
-    protected List<Operacao> operacoes;
+    protected List<Operacao> operacoes = new ArrayList<>();
     protected double saldo;
 
     /**
